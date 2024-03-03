@@ -1,0 +1,75 @@
+sudo dpkg -i mysql-apt-config_0.8.29-1_all.deb
+(Чтение базы данных … на данный момент установлено 188398 файлов и каталогов.)
+Подготовка к распаковке mysql-apt-config_0.8.29-1_all.deb …
+Распаковывается mysql-apt-config (0.8.29-1) на замену (0.8.29-1) …
+Настраивается пакет mysql-apt-config (0.8.29-1) …
+nvtsk@Losus-Linux:~/Рабочий стол/gb-spec-work$ sudo apt-get update
+Сущ:1 http://ru.archive.ubuntu.com/ubuntu jammy InRelease                      
+Пол:2 http://repo.mysql.com/apt/ubuntu jammy InRelease [20,2 kB]               
+Пол:3 http://ru.archive.ubuntu.com/ubuntu jammy-updates InRelease [119 kB]     
+Пол:4 http://security.ubuntu.com/ubuntu jammy-security InRelease [110 kB]      
+Пол:5 https://download.docker.com/linux/ubuntu jammy InRelease [48,8 kB]       
+Пол:6 https://download.docker.com/linux/ubuntu bionic InRelease [64,4 kB]      
+Пол:7 http://repo.mysql.com/apt/ubuntu jammy/mysql-8.0 Sources [964 B]         
+Пол:8 http://ru.archive.ubuntu.com/ubuntu jammy-backports InRelease [109 kB]   
+Пол:9 https://download.docker.com/linux/ubuntu jammy/stable amd64 Packages [26,8 kB]
+Пол:10 http://ru.archive.ubuntu.com/ubuntu jammy-updates/main amd64 Packages [1 421 kB]
+Пол:11 http://repo.mysql.com/apt/ubuntu jammy/mysql-apt-config i386 Packages [566 B]
+Пол:12 http://repo.mysql.com/apt/ubuntu jammy/mysql-apt-config amd64 Packages [566 B]
+Пол:13 http://repo.mysql.com/apt/ubuntu jammy/mysql-8.0 amd64 Packages [14,6 kB]
+Пол:14 http://repo.mysql.com/apt/ubuntu jammy/mysql-tools amd64 Packages [4 123 B]
+Пол:15 http://repo.mysql.com/apt/ubuntu jammy/mysql-tools i386 Packages [458 B]
+Пол:16 http://security.ubuntu.com/ubuntu jammy-security/main i386 Packages [413 kB]
+Пол:17 http://ru.archive.ubuntu.com/ubuntu jammy-updates/main i386 Packages [579 kB]
+Пол:18 http://security.ubuntu.com/ubuntu jammy-security/main amd64 Packages [1 205 kB]
+Пол:19 http://ru.archive.ubuntu.com/ubuntu jammy-updates/main Translation-en [279 kB]
+Пол:20 http://ru.archive.ubuntu.com/ubuntu jammy-updates/restricted i386 Packages [35,3 kB]
+Пол:21 http://ru.archive.ubuntu.com/ubuntu jammy-updates/restricted amd64 Packages [1 504 kB]
+Пол:22 http://security.ubuntu.com/ubuntu jammy-security/main Translation-en [219 kB]
+Пол:23 http://security.ubuntu.com/ubuntu jammy-security/restricted amd64 Packages [1 476 kB]
+Пол:24 http://security.ubuntu.com/ubuntu jammy-security/restricted i386 Packages [33,7 kB]
+Пол:25 http://security.ubuntu.com/ubuntu jammy-security/restricted Translation-en [244 kB]
+Пол:26 http://security.ubuntu.com/ubuntu jammy-security/universe i386 Packages [596 kB]
+Пол:27 http://security.ubuntu.com/ubuntu jammy-security/universe amd64 Packages [846 kB]
+Пол:28 http://ru.archive.ubuntu.com/ubuntu jammy-updates/restricted Translation-en [247 kB]
+Пол:29 http://security.ubuntu.com/ubuntu jammy-security/universe Translation-en [161 kB]
+Пол:30 http://security.ubuntu.com/ubuntu jammy-security/multiverse amd64 Packages [37,1 kB]
+Пол:31 http://ru.archive.ubuntu.com/ubuntu jammy-updates/universe amd64 Packages [1 052 kB]
+Пол:32 http://ru.archive.ubuntu.com/ubuntu jammy-updates/universe i386 Packages [691 kB]
+Пол:33 http://ru.archive.ubuntu.com/ubuntu jammy-updates/universe Translation-en [237 kB]
+Пол:34 http://ru.archive.ubuntu.com/ubuntu jammy-updates/multiverse amd64 Packages [42,1 kB]
+Пол:35 http://ru.archive.ubuntu.com/ubuntu jammy-updates/multiverse i386 Packages [4 160 B]
+Пол:36 http://ru.archive.ubuntu.com/ubuntu jammy-backports/universe amd64 Packages [24,3 kB]
+Пол:37 http://ru.archive.ubuntu.com/ubuntu jammy-backports/universe i386 Packages [13,4 kB]
+Получено 11,9 MB за 10с (1 151 kB/s)                                           
+Чтение списков пакетов… Готово
+W: Цель Packages (stable/binary-amd64/Packages) настроена несколько раз: в /etc/apt/sources.list.d/archive_uri-https_download_docker_com_linux_ubuntu-jammy.list:1 и в /etc/apt/sources.list.d/docker.list:1
+W: Цель Packages (stable/binary-all/Packages) настроена несколько раз: в /etc/apt/sources.list.d/archive_uri-https_download_docker_com_linux_ubuntu-jammy.list:1 и в /etc/apt/sources.list.d/docker.list:1
+W: Цель Translations (stable/i18n/Translation-ru_RU) настроена несколько раз: в /etc/apt/sources.list.d/archive_uri-https_download_docker_com_linux_ubuntu-jammy.list:1 и в /etc/apt/sources.list.d/docker.list:1
+W: Цель Translations (stable/i18n/Translation-ru) настроена несколько раз: в /etc/apt/sources.list.d/archive_uri-https_download_docker_com_linux_ubuntu-jammy.list:1 и в /etc/apt/sources.list.d/docker.list:1
+W: Цель Translations (stable/i18n/Translation-en) настроена несколько раз: в /etc/apt/sources.list.d/archive_uri-https_download_docker_com_linux_ubuntu-jammy.list:1 и в /etc/apt/sources.list.d/docker.list:1
+W: Цель DEP-11 (stable/dep11/Components-amd64.yml) настроена несколько раз: в /etc/apt/sources.list.d/archive_uri-https_download_docker_com_linux_ubuntu-jammy.list:1 и в /etc/apt/sources.list.d/docker.list:1
+W: Цель DEP-11 (stable/dep11/Components-all.yml) настроена несколько раз: в /etc/apt/sources.list.d/archive_uri-https_download_docker_com_linux_ubuntu-jammy.list:1 и в /etc/apt/sources.list.d/docker.list:1
+W: Цель DEP-11-icons-small (stable/dep11/icons-48x48.tar) настроена несколько раз: в /etc/apt/sources.list.d/archive_uri-https_download_docker_com_linux_ubuntu-jammy.list:1 и в /etc/apt/sources.list.d/docker.list:1
+W: Цель DEP-11-icons (stable/dep11/icons-64x64.tar) настроена несколько раз: в /etc/apt/sources.list.d/archive_uri-https_download_docker_com_linux_ubuntu-jammy.list:1 и в /etc/apt/sources.list.d/docker.list:1
+W: Цель DEP-11-icons-hidpi (stable/dep11/icons-64x64@2.tar) настроена несколько раз: в /etc/apt/sources.list.d/archive_uri-https_download_docker_com_linux_ubuntu-jammy.list:1 и в /etc/apt/sources.list.d/docker.list:1
+W: Цель CNF (stable/cnf/Commands-amd64) настроена несколько раз: в /etc/apt/sources.list.d/archive_uri-https_download_docker_com_linux_ubuntu-jammy.list:1 и в /etc/apt/sources.list.d/docker.list:1
+W: Цель CNF (stable/cnf/Commands-all) настроена несколько раз: в /etc/apt/sources.list.d/archive_uri-https_download_docker_com_linux_ubuntu-jammy.list:1 и в /etc/apt/sources.list.d/docker.list:1
+W: https://download.docker.com/linux/ubuntu/dists/bionic/InRelease: Key is stored in legacy trusted.gpg keyring (/etc/apt/trusted.gpg), see the DEPRECATION section in apt-key(8) for details.
+W: Цель Packages (stable/binary-amd64/Packages) настроена несколько раз: в /etc/apt/sources.list.d/archive_uri-https_download_docker_com_linux_ubuntu-jammy.list:1 и в /etc/apt/sources.list.d/docker.list:1
+W: Цель Packages (stable/binary-all/Packages) настроена несколько раз: в /etc/apt/sources.list.d/archive_uri-https_download_docker_com_linux_ubuntu-jammy.list:1 и в /etc/apt/sources.list.d/docker.list:1
+W: Цель Translations (stable/i18n/Translation-ru_RU) настроена несколько раз: в /etc/apt/sources.list.d/archive_uri-https_download_docker_com_linux_ubuntu-jammy.list:1 и в /etc/apt/sources.list.d/docker.list:1
+W: Цель Translations (stable/i18n/Translation-ru) настроена несколько раз: в /etc/apt/sources.list.d/archive_uri-https_download_docker_com_linux_ubuntu-jammy.list:1 и в /etc/apt/sources.list.d/docker.list:1
+W: Цель Translations (stable/i18n/Translation-en) настроена несколько раз: в /etc/apt/sources.list.d/archive_uri-https_download_docker_com_linux_ubuntu-jammy.list:1 и в /etc/apt/sources.list.d/docker.list:1
+W: Цель DEP-11 (stable/dep11/Components-amd64.yml) настроена несколько раз: в /etc/apt/sources.list.d/archive_uri-https_download_docker_com_linux_ubuntu-jammy.list:1 и в /etc/apt/sources.list.d/docker.list:1
+W: Цель DEP-11 (stable/dep11/Components-all.yml) настроена несколько раз: в /etc/apt/sources.list.d/archive_uri-https_download_docker_com_linux_ubuntu-jammy.list:1 и в /etc/apt/sources.list.d/docker.list:1
+W: Цель DEP-11-icons-small (stable/dep11/icons-48x48.tar) настроена несколько раз: в /etc/apt/sources.list.d/archive_uri-https_download_docker_com_linux_ubuntu-jammy.list:1 и в /etc/apt/sources.list.d/docker.list:1
+W: Цель DEP-11-icons (stable/dep11/icons-64x64.tar) настроена несколько раз: в /etc/apt/sources.list.d/archive_uri-https_download_docker_com_linux_ubuntu-jammy.list:1 и в /etc/apt/sources.list.d/docker.list:1
+W: Цель DEP-11-icons-hidpi (stable/dep11/icons-64x64@2.tar) настроена несколько раз: в /etc/apt/sources.list.d/archive_uri-https_download_docker_com_linux_ubuntu-jammy.list:1 и в /etc/apt/sources.list.d/docker.list:1
+W: Цель CNF (stable/cnf/Commands-amd64) настроена несколько раз: в /etc/apt/sources.list.d/archive_uri-https_download_docker_com_linux_ubuntu-jammy.list:1 и в /etc/apt/sources.list.d/docker.list:1
+W: Цель CNF (stable/cnf/Commands-all) настроена несколько раз: в /etc/apt/sources.list.d/archive_uri-https_download_docker_com_linux_ubuntu-jammy.list:1 и в /etc/apt/sources.list.d/docker.list:1
+nvtsk@Losus-Linux:~/Рабочий стол/gb-spec-work$ sudo dpkg -i mysql-apt-config_0.8.29-1_all.deb
+(Чтение базы данных … на данный момент установлено 188398 файлов и каталогов.)
+Подготовка к распаковке mysql-apt-config_0.8.29-1_all.deb …
+Распаковывается mysql-apt-config (0.8.29-1) на замену (0.8.29-1) …
+Настраивается пакет mysql-apt-config (0.8.29-1) …
