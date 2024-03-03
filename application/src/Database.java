@@ -9,12 +9,20 @@ public class Database {
     private static final String FILE_PATH = "app/database.txt";
 
     public Database() {
-        animals = new ArrayList<>();
+        this.animals = new ArrayList<>();
+
         loadDatabase();
     }
 
     public void addAnimal(Animal animal) {
-        animals.add(animal);
+        this.animals.add(animal);
+
+        try(Counter counter = new Counter()) {
+            counter.add();
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+
         saveDatabase();
     }
 
