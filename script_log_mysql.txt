@@ -1,0 +1,217 @@
+DROP DATABASE IF EXISTS `human_friends`;
+
+-- Создаем базу данных "human_friends", если ее еще нет
+CREATE DATABASE IF NOT EXISTS `human_friends`;
+
+-- Используем созданную базу данных
+USE `human_friends`;
+
+-- Создаем таблицу "animals"
+CREATE TABLE `animals` (
+  id INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY UNIQUE,
+  animals_class VARCHAR(30)
+);
+
+
+-- Создаем таблицу "dogs" с внешним ключом на таблицу "animals"
+CREATE TABLE `dogs` (
+   id INT UNSIGNED NOT NULL AUTO_INCREMENT UNIQUE,
+  `name` VARCHAR(50) NOT NULL,
+  `skills` VARCHAR(100) NOT NULL,
+  `birth_date` DATE NOT NULL,
+  `animal_class_id` INT UNSIGNED NOT NULL,
+  FOREIGN KEY (`animal_class_id`) REFERENCES `animals` (`id`) ON DELETE CASCADE
+);
+
+-- Создаем таблицу "cats" с внешним ключом на таблицу "animals"
+CREATE TABLE `cats` (
+   id INT UNSIGNED NOT NULL AUTO_INCREMENT UNIQUE,
+  `name` VARCHAR(50) NOT NULL,
+  `skills` VARCHAR(100) NOT NULL,
+  `birth_date` DATE NOT NULL,
+  `animal_class_id` INT UNSIGNED NOT NULL,
+  FOREIGN KEY (`animal_class_id`) REFERENCES `animals` (`id`) ON DELETE CASCADE
+);
+
+-- Создаем таблицу "hamsters" с внешним ключом на таблицу "animals"
+CREATE TABLE `hamsters` (
+   id INT UNSIGNED NOT NULL AUTO_INCREMENT UNIQUE,
+  `name` VARCHAR(50) NOT NULL,
+  `skills` VARCHAR(100) NOT NULL,
+  `birth_date` DATE NOT NULL,
+  `animal_class_id` INT UNSIGNED NOT NULL,
+  FOREIGN KEY (`animal_class_id`) REFERENCES `animals` (`id`) ON DELETE CASCADE
+);
+
+
+-- Создаем таблицу "horses" с внешним ключом на таблицу "animals"
+CREATE TABLE `horses` (
+   id INT UNSIGNED NOT NULL AUTO_INCREMENT UNIQUE,
+  `name` VARCHAR(50) NOT NULL,
+  `skills` VARCHAR(100) NOT NULL,
+  `birth_date` DATE NOT NULL,
+  `animal_class_id` INT UNSIGNED NOT NULL,
+  FOREIGN KEY (`animal_class_id`) REFERENCES `animals` (`id`) ON DELETE CASCADE
+);
+
+-- Создаем таблицу "camels" с внешним ключом на таблицу "animals"
+CREATE TABLE `camels` (
+   id INT UNSIGNED NOT NULL AUTO_INCREMENT UNIQUE,
+  `name` VARCHAR(50) NOT NULL,
+  `skills` VARCHAR(100) NOT NULL,
+  `birth_date` DATE NOT NULL,
+  `animal_class_id` INT UNSIGNED NOT NULL,
+  FOREIGN KEY (`animal_class_id`) REFERENCES `animals` (`id`) ON DELETE CASCADE
+);
+
+-- Создаем таблицу "donkeys" с внешним ключом на таблицу "animals"
+CREATE TABLE `donkeys` (
+   id INT UNSIGNED NOT NULL AUTO_INCREMENT UNIQUE,
+  `name` VARCHAR(50) NOT NULL,
+  `skills` VARCHAR(100) NOT NULL,
+  `birth_date` DATE NOT NULL,
+  `animal_class_id` INT UNSIGNED NOT NULL,
+  FOREIGN KEY (`animal_class_id`) REFERENCES `animals` (`id`) ON DELETE CASCADE
+);
+
+-- Заполняем таблицу "animals"
+INSERT INTO `human_friends`.`animals` (`id`, `animals_class`) VALUES ('1', 'pet'), ('2', 'wild');
+
+-- Заполняем таблицу "dogs"
+INSERT INTO `human_friends`.`dogs` (`name`, `skills`, `birth_date`, `animal_class_id`) VALUES
+  ('Ваня', 'Стоять, Дать Лапу', '2019-02-10', 1),
+  ('Женя', 'Сидеть, Стоять, Дать Лапу', '2018-06-15', 1),
+  ('Макс', 'Сидеть, Стоять', '2020-01-05', 1),
+  ('Пупочка', 'Сидеть, Стоять, Дать Лапу', '2017-09-20', 1),
+  ('Дупочка', 'Сидеть, Дать Лапу', '2016-12-08', 1);
+
+-- Заполняем таблицу "cats"
+INSERT INTO `human_friends`.`cats` (`name`, `skills`, `birth_date`, `animal_class_id`) VALUES
+  ('Джусик', 'Помурчать', '2018-04-25', 1),
+  ('Пусик', 'Мякнуть, Помурчать', '2019-07-10', 1),
+  ('Мяукинс', 'Лечь, Встать, Мяукнуть', '2020-03-17', 1),
+  ('Мупопо', 'Дать лапу, Лечь', '2017-11-30', 1),
+  ('Чумба', 'Мякнуть, Лечь', '2016-09-12', 1);
+
+-- Заполняем таблицу "hamsters"
+INSERT INTO `human_friends`.`hamsters` (`name`, `skills`, `birth_date`, `animal_class_id`) VALUES
+  ('Щекастый', 'Хомячить', '2021-01-03', 1),
+  ('Носастый', 'Спать, Хомячить', '2022-02-14', 1),
+  ('Глазастый', 'Ходить, Хомячить', '2020-11-20', 1),
+  ('Чебурек', 'Хлопнуть щечками, Хомячить', '2019-10-05', 1),
+  ('Арахис', 'Лечь, Встать, Хрустеть орехами', '2023-04-01', 1);
+
+-- Заполняем таблицу "horses"
+INSERT INTO `human_friends`.`horses` (`name`, `skills`, `birth_date`, `animal_class_id`) VALUES
+  ('Вольный', 'Прыгать', '2015-08-20', 2),
+  ('Свободный', 'Бррррр', '2016-06-10', 2),
+  ('Прыткий', 'Прыгать, брррр', '2017-03-15', 2),
+  ('Грациозный', 'Бежать галопом', '2018-11-25', 2),
+  ('Черный', 'Брррр, Бежать галопом', '2019-09-05', 2);
+
+-- Заполняем таблицу "camels"
+INSERT INTO `human_friends`.`camels` (`name`, `skills`, `birth_date`, `animal_class_id`) VALUES
+  ('Сурен', 'Плеваться', '2014-12-01', 2),
+  ('Армен', 'Плеваться, Жевать', '2015-10-18', 2),
+  ('Зарен', 'Жевать', '2016-07-24', 2),
+  ('Курен', 'Плеваться, Стоять', '2017-04-09', 2),
+  ('Морен', 'Лечь, Встать, Плеваться', '2018-02-15', 2);
+
+-- Заполняем таблицу "donkeys"
+INSERT INTO `human_friends`.`donkeys` (`name`, `skills`, `birth_date`, `animal_class_id`) VALUES
+  ('Баранка', 'Грызть', '2019-08-12', 2),
+  ('Лопата', 'Копать, грызть', '2020-05-05', 2),
+  ('Сухарь', 'Копать, Спать', '2021-02-20', 2),
+  ('Хвост', 'Кусать хвост, Спать', '2022-09-10', 2),
+  ('Ушастый', 'Дергть ушами, Грызть хвост', '2023-06-05', 2);
+  
+-- Удалить таблицу "camels"
+  DROP TABLE `human_friends`.`camels`;
+  
+-- Объединить таблицы "horses", и "donkeys" в одну таблицу
+-- Создаем новую таблицу "horses_and_donkeys" для объединения "horses" и "donkeys"
+CREATE TABLE `horses_and_donkeys` (
+   id INT UNSIGNED NOT NULL AUTO_INCREMENT UNIQUE,
+  `name` VARCHAR(50) NOT NULL,
+  `skills` VARCHAR(100) NOT NULL,
+  `birth_date` DATE NOT NULL,
+  `animal_class_id` INT UNSIGNED NOT NULL,
+  `species` VARCHAR(10) NOT NULL,
+  PRIMARY KEY (`id`)
+);
+
+-- Вставляем данные из "horses" в таблицу "horses_and_donkeys"
+INSERT INTO `horses_and_donkeys` (`name`, `skills`, `birth_date`, `animal_class_id`, `species`)
+SELECT `name`, `skills`, `birth_date`, `animal_class_id`, 'Horse' AS `species`
+FROM `horses`;
+
+-- Вставляем данные из "donkeys" в таблицу "horses_and_donkeys"
+INSERT INTO `horses_and_donkeys` (`name`, `skills`, `birth_date`, `animal_class_id`, `species`)
+SELECT `name`, `skills`, `birth_date`, `animal_class_id`, 'Donkey' AS `species`
+FROM `donkeys`;
+
+-- Создаем новую таблицу "young_animals"
+CREATE TABLE `young_animals` (
+  id INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  `name` VARCHAR(50) NOT NULL,
+  `species` VARCHAR(20) NOT NULL,
+  `age_months` INT NOT NULL
+);
+
+-- Вставляем данные из таблиц `dogs`, `cats`, `donkeys`, `hamsters`, и `horses` в таблицу `young_animals`
+INSERT INTO `young_animals` (`name`, `species`, `age_months`)
+SELECT `name`, 'Dog' AS `species`, TIMESTAMPDIFF(MONTH, `birth_date`, CURDATE()) AS `age_months`
+FROM `dogs`
+WHERE `birth_date` <= DATE_SUB(CURDATE(), INTERVAL 1 YEAR) AND `birth_date` >= DATE_SUB(CURDATE(), INTERVAL 3 YEAR);
+
+INSERT INTO `young_animals` (`name`, `species`, `age_months`)
+SELECT `name`, 'Cat' AS `species`, TIMESTAMPDIFF(MONTH, `birth_date`, CURDATE()) AS `age_months`
+FROM `cats`
+WHERE `birth_date` <= DATE_SUB(CURDATE(), INTERVAL 1 YEAR) AND `birth_date` >= DATE_SUB(CURDATE(), INTERVAL 3 YEAR);
+
+INSERT INTO `young_animals` (`name`, `species`, `age_months`)
+SELECT `name`, 'Donkey' AS `species`, TIMESTAMPDIFF(MONTH, `birth_date`, CURDATE()) AS `age_months`
+FROM `donkeys`
+WHERE `birth_date` <= DATE_SUB(CURDATE(), INTERVAL 1 YEAR) AND `birth_date` >= DATE_SUB(CURDATE(), INTERVAL 3 YEAR);
+
+INSERT INTO `young_animals` (`name`, `species`, `age_months`)
+SELECT `name`, 'Hamster' AS `species`, TIMESTAMPDIFF(MONTH, `birth_date`, CURDATE()) AS `age_months`
+FROM `hamsters`
+WHERE `birth_date` <= DATE_SUB(CURDATE(), INTERVAL 1 YEAR) AND `birth_date` >= DATE_SUB(CURDATE(), INTERVAL 3 YEAR);
+
+INSERT INTO `young_animals` (`name`, `species`, `age_months`)
+SELECT `name`, 'Horse' AS `species`, TIMESTAMPDIFF(MONTH, `birth_date`, CURDATE()) AS `age_months`
+FROM `horses`
+WHERE `birth_date` <= DATE_SUB(CURDATE(), INTERVAL 1 YEAR) AND `birth_date` >= DATE_SUB(CURDATE(), INTERVAL 3 YEAR);
+
+-- Создаем новую таблицу "all_animals"
+CREATE TABLE `all_animals` (
+   id INT UNSIGNED NOT NULL AUTO_INCREMENT UNIQUE,
+  `name` VARCHAR(50) NOT NULL,
+  `skills` VARCHAR(100) NOT NULL,
+  `birth_date` DATE NOT NULL,
+  `animal_class_id` INT UNSIGNED NOT NULL,
+  `source_table` VARCHAR(20) NOT NULL,
+  PRIMARY KEY (`id`)
+);
+
+-- Вставляем данные из таблиц `dogs`, `cats`, `donkeys`, `hamsters`, и `horses` в таблицу `all_animals`
+INSERT INTO `all_animals` (`name`, `skills`, `birth_date`, `animal_class_id`, `source_table`)
+SELECT `name`, `skills`, `birth_date`, `animal_class_id`, 'dogs' AS `source_table`
+FROM `dogs`;
+
+INSERT INTO `all_animals` (`name`, `skills`, `birth_date`, `animal_class_id`, `source_table`)
+SELECT `name`, `skills`, `birth_date`, `animal_class_id`, 'cats' AS `source_table`
+FROM `cats`;
+
+INSERT INTO `all_animals` (`name`, `skills`, `birth_date`, `animal_class_id`, `source_table`)
+SELECT `name`, `skills`, `birth_date`, `animal_class_id`, 'donkeys' AS `source_table`
+FROM `donkeys`;
+
+INSERT INTO `all_animals` (`name`, `skills`, `birth_date`, `animal_class_id`, `source_table`)
+SELECT `name`, `skills`, `birth_date`, `animal_class_id`, 'hamsters' AS `source_table`
+FROM `hamsters`;
+
+INSERT INTO `all_animals` (`name`, `skills`, `birth_date`, `animal_class_id`, `source_table`)
+SELECT `name`, `skills`, `birth_date`, `animal_class_id`, 'horses' AS `source_table`
+FROM `horses`;
